@@ -1,31 +1,45 @@
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Menü</title>
-</head>
-<body>
-    <?php
+<?php
     $menu = [
-        "home" => "Nyitó oldal",
-        "contact" => "Kapcsolat",
-        "gallery" => "Galéria",
-        "about" => "Rólunk",
+        "home.php" => "Nyitó oldal",
+        "contact.php" => "Kapcsolat",
+        "gallery.php" => "Galéria",
+        "about.php" => "Rólunk",
     ];
 
-    echo "<nav>";
+    // echo "<nav>";
     
-    function MenuMaker($items) {
-            foreach ($items as $key => $value) { 
-                echo "<li>$value</li>";
-            }
-        }
+    // function MenuMaker($items) {
+    //         foreach ($items as $key => $value) { 
+    //             echo "<li><a href='$key'>$value</a></li>";
+    //         }
+    //     }
 
-        MenuMaker($menu);
+    //     MenuMaker($menu);
         
-    echo "</nav>";
-    ?>
-</body>
-</html>
+    // echo "</nav>";
+
+    // function MenuMaker2($items) {
+    //     $nav = "<nav>";
+    //     foreach ($items as $key => $value) { 
+    //         $nav .= "<li>$value</li>";
+    //     }
+    //     $nav .= "</nav>";
+
+    //     return $nav;
+    // }
+
+    function MenuMaker3($items, $active = NULL) {
+        echo "<nav>";
+        foreach ($items as $key => $value) { 
+            echo '<li';
+            if ($active == $key) {
+                echo 'class="active">';
+            } else {
+                echo '>';
+            }
+            echo '<a href="?page =' . $key . '">' . $value . '</a>';
+            echo '</li>';
+            }
+        echo "</nav>";
+        }
+?>

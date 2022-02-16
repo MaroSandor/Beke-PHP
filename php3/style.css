@@ -13,3 +13,11 @@ a {
     text-decoration: none;
     color: white;
 }
+
+li.active {
+    background-color: aqua;
+}
+
+li.active a {
+    color: black;
+}
