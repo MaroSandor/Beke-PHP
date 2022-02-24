@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: brown;
+form {
+    display: block;
+    margin: auto;
+    padding: auto;
+    width: 100%;
+}
+
+div {
+    padding: 10px 0;
 }
