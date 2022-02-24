@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+div {
+    padding: 10px 0;
+}
+
+form {
+    width: auto;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+}
+
+form fieldset {
+    text-align: center;
+}
